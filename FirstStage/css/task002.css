@@ -4,6 +4,7 @@
 }
 body{
 	background-color: #ddd;
+	min-width: 800px;
 }
 header{
 	height: 60px;
@@ -121,6 +122,7 @@ article img{
 }
 #sidebar{
 	font-size: 15px;
+	line-height: 35px;
 }
 #sidebar h2{
 	border-left: 3px solid #bbb; 
@@ -130,8 +132,16 @@ article img{
 #sidebar h3{
 	display: none;
 }
-#sidebar span{
-	display: block;
+#sidebar>label{
+	color: #bbb;
+	position: relative;
+	left: 35.5%;
+}
+#sidebar div label{
+	display: inline-block;
+	width: 35%;
+	text-align: right;
+	vertical-align: top;
 }
 #sidebar #submit{
 	font-size: 20px;
@@ -141,6 +151,10 @@ article img{
 	border: 1px;
 	height: 35px;
 	background-color: #027DF6;
+}
+#sidebar textarea{
+	width: 50%;
+	height: 200px;
 }
 footer{
 	font-size: 15px;

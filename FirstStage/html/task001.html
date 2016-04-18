@@ -89,35 +89,42 @@
 	<article id="sidebar">
 		<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
 		<h3>侧栏注册窗口标题</h3>
-		<p>请输入邮箱地址：<input type="text" value="这是一个文本输入框"></p>
-		<p>邮箱地址请按要求格式输入</p>
-		<p>
-			请输入密码：<input type="password" value="这是一个文本输入框">
-			<span>请重复输入密码：<input type="password" value="这是一个文本输入框"></span>
-		</p>
-		<p>密码请为6-16位英文数字</p>
-		<span>
-			性别：
+		<div>
+			<label>请输入邮箱地址：</label>
+			<input type="text" value="这是一个文本输入框">
+		</div>
+		<label>邮箱地址请按要求格式输入</label>
+		<div>
+			<label>请输入密码：</label>
+			<input type="password" value="这是一个文本输入框">
+		</div>
+		<div>
+			<label>请重复输入密码：</label>
+			<input type="password" value="这是一个文本输入框">
+		</div>
+		<label>密码请为6-16位英文数字</label>
+		<div>
+			<label>性别：</label>
 			<input type="radio" checked="true">男
 			<input type="radio">女
-		</span>
-		<span>
-			城市：
+		</div>
+		<div>
+			<label>城市：</label>
 			<select>
 				<option>北京</option>
 				<option>上海</option>
 			</select>
-		</span>
-		<span>
-			爱好：
+		</div>
+		<div>
+			<label>爱好：</label>
 			<input type="checkbox" checked="true">运动
 			<input type="checkbox">艺术
 			<input type="checkbox">科学
-		</span>
-		<span>
-			个人描述：
+		</div>
+		<div>
+		<label>个人描述：</label>
 			<textarea rows="2">这是一个多行输入框，输入您的个人描述</textarea>
-		</span>
+		</div>
 			<input id="submit" type="button" value="确认提交">
 		</p>
 	</article>
