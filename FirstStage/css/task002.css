@@ -1,0 +1,152 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background-color: #ddd;
+}
+header{
+	height: 60px;
+	background-color: #242424;
+}
+header h1{
+	font-size: 27px;
+	color: #A51E4A;
+	position: relative;
+	top: 20px;
+	left: 20px;
+	float: left;
+}
+header ul{
+	float: right;
+	position: relative;
+	right: 20px;
+	top: 30px;
+}
+header ul li{
+	float: left;
+	margin-left: 30px;
+}
+header ul li a{
+	text-decoration: none;
+	color: #E9E5E5;
+	font-family:  "SimHei";
+}
+article{
+	border: 1px solid #bbb;
+	margin: 30px;
+	box-shadow: 2px 2px 2px #aaa;
+	background-color: #fff;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	line-height: 30px;
+}
+article h2{
+	font-family:  "SimHei";
+	margin-top: 30px;
+}
+article h3{
+	font-family:  "SimHei";
+	margin-top: 10px;
+	color: #7E7C7E;
+}
+article h4{
+	font-family:  "SimHei";
+	margin-top: 10px;
+	color: #7E7C7E;
+	margin-bottom: 10px; 
+}
+article p{
+	text-indent: 2em;
+}
+article img{
+	margin-top: 10px;
+}
+#art2 ul{
+	list-style: none;
+	text-indent: 2em;
+}
+#img blockquote{
+	padding: 10px;
+	border: 1px solid #bbb;
+	margin: 20px;
+	width: 150px;
+	height: 160px;
+	font-size: 10px;
+}
+#img p{
+	text-indent: 0;
+	text-align: center;
+	display: block;
+}
+#img img{
+	max-width: 100%;
+	max-height: 100%;
+}
+#art3 ol{
+	/*如何让他和别的元素有一样的初始外边距，然后还能再缩进*/
+	margin-left:4em;
+}
+#art3 p{
+	text-indent: 0;
+}
+#art3 table{
+	width: 100%;
+	line-height: 20px;
+	font-size: 12px;
+	border-left: 0;
+	border-top: 0;
+	border-right: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+
+}
+#art3 table td,th{
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 1px solid #bbb;
+	border-top: 1px solid #bbb;
+}
+#art3 table th{
+	width: 40%;
+	background-color: black;
+	color: #fff;
+	text-align: left;
+}
+#art3 table #th{
+	width: 20%;
+}
+#art3 table .lastrow{
+	background-color: #ddd;
+}
+#sidebar{
+	font-size: 15px;
+}
+#sidebar h2{
+	border-left: 3px solid #bbb; 
+	font-size: 17px;
+	padding-left:10px; 
+}
+#sidebar h3{
+	display: none;
+}
+#sidebar span{
+	display: block;
+}
+#sidebar #submit{
+	font-size: 20px;
+	width: 100%;
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px;
+	height: 35px;
+	background-color: #027DF6;
+}
+footer{
+	font-size: 15px;
+	height: 50px;
+	text-align: center;
+	padding-top:20px;
+	background-color: black;
+	color: #fff;
+}
