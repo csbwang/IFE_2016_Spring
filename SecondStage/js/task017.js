@@ -63,10 +63,10 @@ function renderChart() {
       width = 5;
       break;
     case 'week':
-      width = 10;
+      width = 30;
       break;
     case 'month':
-      width = 15;
+      width = 60;
       break;
   }
   var charStr = '';
@@ -188,9 +188,13 @@ function initAqiChartData() {
                 aqiNum = 0;
               }
               else{
+                if(curMonth !== preMonth){
+                  dateStr = key;
+                }
                 numOfDays +=1;
                 aqiNum += tmpData[key];
                 preMonth = curMonth;
+                preKey = key;
               }
             }
             if(numOfDays !== 0){
