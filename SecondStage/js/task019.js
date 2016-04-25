@@ -33,23 +33,49 @@ function queueDelete(location){
 	}
 }
 
+//直接产生结果，不会显示中间过程
+// function sort(){
+// 	var oQueue = document.getElementById('queue');
+// 	var i, j, len = oQueue.childNodes.length, tmp, isExchanged = false, timer;
+// 	for(i = 0; i < len - 1; i++){
+// 		isExchanged = false;
+// 		for(j = 0; j < len - i - 1; j++){
+// 			if(oQueue.childNodes[j].offsetHeight > oQueue.childNodes[j + 1].offsetHeight){
+// 				tmp = oQueue.childNodes[j + 1].offsetHeight;
+// 				oQueue.childNodes[j + 1].style['height'] = oQueue.childNodes[j].offsetHeight + 'px';
+// 				oQueue.childNodes[j].style['height'] = tmp + 'px';
+// 				isExchanged = true;
+// 			}
+// 		}
+// 		if(!isExchanged){
+// 			return;
+// 		}
+// 	}
+// }
+
+// 排序的过程可以显示出来
 function sort(){
 	var oQueue = document.getElementById('queue');
-	var i, j, len = oQueue.childNodes.length, tmp, isExchanged = false, timer;
-	for(i = 0; i < len - 1; i++){
-		isExchanged = false;
-		for(j = 0; j < len - i - 1; j++){
-			if(oQueue.childNodes[j].offsetHeight > oQueue.childNodes[j + 1].offsetHeight){
-				tmp = oQueue.childNodes[j + 1].offsetHeight;
-				oQueue.childNodes[j + 1].style['height'] = oQueue.childNodes[j].offsetHeight + 'px';
-				oQueue.childNodes[j].style['height'] = tmp + 'px';
-				isExchanged = true;
+	var i = 0, j = 0, len = oQueue.childNodes.length, tmp, isExchanged = false, timer;
+	timer = setInterval(function(){
+		if(oQueue.childNodes[j].offsetHeight > oQueue.childNodes[j + 1].offsetHeight){
+			tmp = oQueue.childNodes[j + 1].offsetHeight;
+			oQueue.childNodes[j + 1].style['height'] = oQueue.childNodes[j].offsetHeight + 'px';
+			oQueue.childNodes[j].style['height'] = tmp + 'px';
+			isExchanged = true;
+		}
+		j++;
+		if(j >= len - i - 1){
+			if(!isExchanged){
+				clearInterval(timer);
+			}
+			else{
+				i++;
+				j = 0;
+				isExchanged = false;
 			}
 		}
-		if(!isExchanged){
-			return;
-		}
-	}
+	}, 10);
 }
 
 function init(){
