@@ -1,7 +1,6 @@
 function queueInsert(location){
 	var oQueue = document.getElementById('queue');
 	var num = (document.getElementById('input-box').value).match(/^\s*\d+\s*$/);
-	console.log(num);
 	if(num == null){
 		alert('输入不合法，请重新输入');
 		return;
