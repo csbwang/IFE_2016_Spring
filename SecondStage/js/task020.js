@@ -12,12 +12,14 @@ function queueInsert(location){
 	}
 	if(location === 'left'){
 		for(var i = 0; i < elements.length; i++){
-			oQueue.innerHTML = '<div style="height:' + num * 5 + 'px"></div>' + oQueue.innerHTML;
+			oQueue.innerHTML = '<div>' + elements[i] + '</div>' + oQueue.innerHTML;
 		}
 		
 	}
 	else{
-		oQueue.innerHTML = oQueue.innerHTML + '<div style="height:' + num * 5 + 'px"></div>';
+		for(var i = 0; i < elements.length; i++){
+			oQueue.innerHTML = oQueue.innerHTML + '<div>' + elements[i] + '</div>';
+		}
 	}
 }
 
@@ -45,6 +47,10 @@ function strSerach(){
 		if(regExp.test(oQueue.childNodes[i].innerHTML)){
 			oQueue.childNodes[i].style['background-color'] = 'green';
 			oQueue.childNodes[i].style['color'] = '#CD8F1F';
+		}
+		else{
+			oQueue.childNodes[i].style['background-color'] = 'red';
+			oQueue.childNodes[i].style['color'] = 'white';
 		}
 	}
 }
