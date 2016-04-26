@@ -30,6 +30,7 @@ function tagInsert(){
 		}
 		oTagSwap.appendChild(newNode);
 		tags.push(tag);
+		document.getElementById('tag-input').value = '';
 	}
 }
 
@@ -59,7 +60,7 @@ function hobbyInsert(){
 function init(){
 	document.getElementById('hobby-btn').onclick = hobbyInsert;
 	document.getElementById('tag-input').onkeypress = function(){
-		if(event.keyCode == 13){
+		if(event.keyCode == 13 || event.keyCode == 32){
 			tagInsert();
 		}
 	}
