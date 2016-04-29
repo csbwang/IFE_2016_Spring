@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task023-JavaScript和树(三)</title>
+	<script src="../js/task024.js"></script>
+	<style>
+	#swap div{
+		display: flex;
+		height: 60%;
+		align-items: center;
+		justify-content: space-around;
+		border: 1px solid #403939;
+        background-color: white;
+        font-size: 5px;
+        margin-left: 5px;
+        margin-right:5px;
+	}
+	#swap #root{
+		width: 900px;
+		height: 100px;
+	}
+	#btn{
+		margin-top: 20px;
+	}
+	</style>
+</head>
+<body>
+	<div id="swap" name="swap">
+		<div id="root">Super
+			<div>Car
+				<div>Color
+					<div>blue</div>
+					<div>black</div>
+					<div>red</div>
+				</div>
+				<div>Price</div>
+				<div>Brand
+					<div>QQ</div>
+					<div>BMW</div>
+				</div>
+			</div>
+			<div>School
+				<div>college
+					<div>teacher</div>
+					<div>students</div>
+					<div>worker</div>
+				</div>
+				<div>university
+					<div>science
+						<div>
+							math
+						</div>
+					</div>
+					<div>technology</div>
+				</div>
+			</div>
+			<div>Fish</div>
+		</div>
+	</div>
+	<div id="btn">
+		<input type="button" id="pre" value="前序遍历"></input>
+		<input type="button" id="post" value="后序遍历"></input>
+		<input type="button" id="delete" value="删除"></input>
+		<input type="text" id="nodeText" placeholder="请输入节点内容"></input>
+        <input type="button" id="add" value="添加"></input>
+	</div>
+</body>
+</html>
