@@ -26,7 +26,7 @@ function postOder(node){
 }
 
 function show(){
-	root = nodeQueue.shift();
+	var root = nodeQueue.shift();
 	root.style.backgroundColor = 'blue';
 	timer = setInterval(function(){
 		root.style.backgroundColor = 'white';
