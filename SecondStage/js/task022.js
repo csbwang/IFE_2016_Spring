@@ -1,5 +1,6 @@
 var nodeQueue = [];
 var curNode = null;
+var timer;
 // 前序遍历
 function preOder(node){	
 	if(node != null){
@@ -28,7 +29,7 @@ function postOder(node){
 }
 
 function show(){
-	root = nodeQueue.shift();
+	var root = nodeQueue.shift();
 	root.style.backgroundColor = 'blue';
 	timer = setInterval(function(){
 		root.style.backgroundColor = 'white';
@@ -52,6 +53,7 @@ function init(){
 		if(curNode != null){
 			// 如果上次遍历非正常结束，则将上一次遍历的最后一个节点的背景色进行处理
 			curNode.style.backgroundColor = 'white';
+			clearInterval(timer);// 注意清除计时器，否则会越来越快
 		}
 		var e = e || window.event;
 		nodeQueue = [];
