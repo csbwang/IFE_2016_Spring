@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task025-JavaScript和树(四)</title>
+	<style>
+		html body{
+			width: 600px;
+			margin: 0 auto;
+			height: 100%;
+			/* border: 1px solid #ccc; */
+			padding: 20px;
+		}
+		#menu{
+			width: 95%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-around;
+		}
+		#swap{
+			margin-top: 20px;
+		}
+		#swap a{
+			border: 1px solid #aaa;
+			width: 1em;
+			height: 1em;
+			text-decoration: none;
+			margin-right: 5px;
+			text-align: center;
+			line-height: 1em;
+			color: #aaa;
+			display: none;
+		}
+		#swap div{
+			border: 1px solid #aaa;
+			margin: 10px;
+			padding: 10px;
+			display: none;
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<div id="menu">
+		<input type="text" id="serachPattern"></input>
+		<input type="button" id="serach" value="搜索"></input>
+		<input type="text" id="nodeText"></input>
+		<input type="button" id="addNode" value="添加节点"></input>
+		<input type="button" id="deleteNode" value="删除节点"></input>
+	</div>
+	<!-- javascript:;表示这是一个空连接。点击之后没任何反应。 -->
+	<!-- 类似的是#，但是一个#点击之后页面很长的情况下会会滚到顶部 -->
+	<div id="swap">
+		<div id="product"><a href="javascript:;">-</a>产品
+			<div>
+				<a href="javascript:;">-</a>手机
+				<div><a href="javascript:;">-</a>Apple
+					<div><!-- <a href="javascript:;">-</a> -->iphone7</div>
+					<div><!-- <a href="javascript:;">-</a> -->iphone6s</div>
+					<div><!-- <a href="javascript:;">-</a> -->iphone6</div>
+				</div>
+				<div><a href="javascript:;">-</a>MeiZu
+					<div><!-- <a href="javascript:;">-</a> -->pro6</div>
+					<div><!-- <a href="javascript:;">-</a> -->mx5</div>
+				</div>
+				<div><!-- <a href="javascript:;">-</a> -->HuaWei</div>
+			</div>
+			<div><a href="javascript:;">-</a>电脑
+				<div><!-- <a href="javascript:;">-</a> -->MacBook</div>
+				<div><!-- <a href="javascript:;">-</a> -->SurfaceBook</div>
+				<div><!-- <a href="javascript:;">-</a> -->Thinkpad</div>
+			</div>
+			<div><a href="javascript:;">-</a>家电
+				<div><!-- <a href="javascript:;">-</a> -->空调</div>
+				<div><!-- <a href="javascript:;">-</a> -->冰箱</div>
+				<div><!-- <a href="javascript:;">-</a> -->洗衣机</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/task025.js"></script>
+</body>
+</html>
