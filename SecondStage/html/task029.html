@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task029-表单（一）单个表单项的检验</title>
+	<style>
+	#swap{
+		width: 500px;
+		margin: 0 auto;
+		margin-top: 100px;
+		font-weight: bold;
+		font-size: 25px;
+		padding: 10px;
+	}
+	#inputBox{
+		padding: 10px;
+		border-radius: 5px;
+		font-size: 25px;
+		border: 2px solid #ddd;
+	}
+	#btn{
+		color: white;
+		background-color: #25ADB1;
+		border: 2px solid #ddd;
+		padding: 10px;
+		border-radius: 5px;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	#inputTip{
+		display: block;
+		margin: 10px;
+		font-size: 20px;
+		padding-left: 50px;
+		color: #bbb;
+	}
+	</style>
+</head>
+<body>
+	<div id="swap">
+		<label for="inputBox">名称</label>
+		<input type="text" id="inputBox" name="inputBox"></input>
+		<input type="button" id="btn" value="验证"></input>
+		<label id="inputTip">必填，长度为4~16个字符</label>
+	</div>
+</body>
+<script>
+	window.onload = function(){
+		var oBtn = document.getElementById('btn');
+		var oInputBox = document.getElementById('inputBox');
+		var oInputTip = document.getElementById('inputTip');
+		oBtn.onclick = function(){
+			var inputStr = oInputBox.value.replace(/[\s\u4e00-\u9fa5]/g, '__');
+			if(inputStr.length < 4 || inputStr.length > 16){
+				oInputBox.style['border'] = '2px solid red';
+				oInputTip.style['color'] = 'red';
+				if(inputStr.length === 0){
+					oInputTip.innerHTML = '姓名不能为空';
+				}
+				else{
+					oInputTip.innerHTML = '必填，长度为4~16个字符';
+				}
+			}
+			else{
+				oInputBox.style['border'] = '2px solid green';
+				oInputTip.style['color'] = 'green';
+				oInputTip.innerHTML = '名称格式正确';
+			}
+		}
+	}
+</script>
+</html>
