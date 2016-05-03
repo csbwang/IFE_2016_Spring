@@ -67,6 +67,11 @@
 				oInputTip.innerHTML = '名称格式正确';
 			}
 		}
+		oInputBox.onfocus = function(){
+			oInputBox.style['border'] = '2px solid #ddd';
+			oInputTip.style['color'] = '#bbb';
+			oInputTip.innerHTML = '必填，长度为4~16个字符';
+		}
 	}
 </script>
 </html>
