@@ -1,12 +1,12 @@
-零基础HTML编码
+任务三十一：表单（三）联动
 ===
-**面向人群：** 零基础或初学者
+**面向人群：** 初学者
 
 **难度：** 简单
 
-**发布时间：** 03-14
+**发布时间：** 03-21
 
-**截止时间：** 04-03 23:59
+**截止时间：** 04-21 23:59
 
 重要说明
 ---
@@ -16,20 +16,23 @@
 
 任务目的
 ---
-* 了解HTML的定义、概念、发展简史
-* 掌握常用HTML标签的含义、用法
-* 能够基于设计稿来合理规划HTML文档结构
-* 理解语义化，合理地使用HTML标签来构建页面
+* 加强对JavaScript的掌握
+* 熟悉常用表单处理逻辑
 
 任务描述
 ---
-* 参考 [示例图（点击查看）](http://7xrp04.com1.z0.glb.clouddn.com/task_1_1_1.jpg) ，完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）
+* 如[示例图](http://7xrp04.com1.z0.glb.clouddn.com/task_2_31_1.jpg)中所示，在页面中完成两个单选框，切换单选框的不同选项时下方显示的表单随之切换。
+* 当选择在校生时，出现两个select下拉菜单，一个选择城市，一个选择学校，当选择非在校生时，出一个文本输入框
+* 学校下拉菜单里的学校名单均为城市下拉菜单中所选的城市中的大学，当城市发生变化时，学校一起发生变化
+* 城市及学校的数据随意编造即可，无需真实完整
 
 任务注意事项
 ---
-* 只需要完成HTML代码编写，不需要写CSS
-* 示例图仅为参考，不需要完全实现一致，其中的图片、文案均可自行设定
-* 尽可能多地尝试更多的HTML标签
+* 要求功能实现与任务描述中完全一致
+* 示例图仅为参考，样式不需要完全实现一致
+* 请注意代码风格的整齐、优雅
+* 代码中含有必要的注释
+* 不允许借助任何第三方组件库实现
 
 任务协作建议
 ---
@@ -43,7 +46,9 @@
 * [Web相关名词通俗解释](https://www.zhihu.com/question/22689579)
 * [MDN HTML入门](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction)
 * [慕课HTML+CSS基础教程视频](http://www.imooc.com/learn/9)
+* [JavaScript 表单验证](http://www.w3school.com.cn/js/js_form_validation.asp)
+* [HTML表单指南](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Forms)
 
 任务链接
 ---
-http://ife.baidu.com/task/detail?taskId=1
+http://ife.baidu.com/task/detail?taskId=31

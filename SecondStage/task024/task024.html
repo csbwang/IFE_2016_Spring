@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>task023-JavaScript和树(二)</title>
-	<script src="../js/task023.js"></script>
+	<title>task023-JavaScript和树(三)</title>
+	<script src="task024.js"></script>
 	<style>
 	#swap div{
 		display: flex;
@@ -26,7 +26,7 @@
 	</style>
 </head>
 <body>
-	<div id="swap">
+	<div id="swap" name="swap">
 		<div id="root">Super
 			<div>Car
 				<div>Color
@@ -59,8 +59,11 @@
 		</div>
 	</div>
 	<div id="btn">
-		<input type="button" id="pre" value="先序"></input>
-        <input type="button" id="post" value="后序"></input>
+		<input type="button" id="pre" value="前序遍历"></input>
+		<input type="button" id="post" value="后序遍历"></input>
+		<input type="button" id="delete" value="删除"></input>
+		<input type="text" id="nodeText" placeholder="请输入节点内容"></input>
+        <input type="button" id="add" value="添加"></input>
 	</div>
 </body>
 </html>

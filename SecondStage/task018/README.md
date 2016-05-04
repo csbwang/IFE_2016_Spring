@@ -1,12 +1,12 @@
-零基础HTML编码
+任务十八：基础JavaScript练习（一）
 ===
-**面向人群：** 零基础或初学者
+**面向人群：** JavaScript初学者
 
 **难度：** 简单
 
-**发布时间：** 03-14
+**发布时间：** 03-21
 
-**截止时间：** 04-03 23:59
+**截止时间：** 04-21 23:59
 
 重要说明
 ---
@@ -16,20 +16,28 @@
 
 任务目的
 ---
-* 了解HTML的定义、概念、发展简史
-* 掌握常用HTML标签的含义、用法
-* 能够基于设计稿来合理规划HTML文档结构
-* 理解语义化，合理地使用HTML标签来构建页面
+* 学习与实践JavaScript的基本语法、语言特性
+* 初步了解JavaScript的事件是什么
+* 初步了解JavaScript中的DOM是什么
 
 任务描述
 ---
-* 参考 [示例图（点击查看）](http://7xrp04.com1.z0.glb.clouddn.com/task_1_1_1.jpg) ，完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）
+* [如图](http://7xrp04.com1.z0.glb.clouddn.com/task_2_18_1.jpg)，模拟一个队列，队列的每个元素是一个数字，初始队列为空
+* 有一个input输入框，以及4个操作按钮
+  * 点击"左侧入"，将input中输入的数字从左侧插入队列中；
+  * 点击"右侧入"，将input中输入的数字从右侧插入队列中；
+  * 点击"左侧出"，读取并删除队列左侧第一个元素，并弹窗显示元素中数值；
+  * 点击"右侧出"，读取并删除队列又侧第一个元素，并弹窗显示元素中数值；
+* 点击队列中任何一个元素，则该元素会被从队列中删除
 
 任务注意事项
 ---
-* 只需要完成HTML代码编写，不需要写CSS
-* 示例图仅为参考，不需要完全实现一致，其中的图片、文案均可自行设定
-* 尽可能多地尝试更多的HTML标签
+* 实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识
+* 请注意代码风格的整齐、优雅
+* 代码中含有必要的注释
+* 示例图仅为参考，不需要完全一致
+* 需要考虑数字输入的合法性
+* 建议不使用任何第三方库、框架
 
 任务协作建议
 ---
@@ -40,10 +48,9 @@
 
 在线学习参考资料
 ---
-* [Web相关名词通俗解释](https://www.zhihu.com/question/22689579)
-* [MDN HTML入门](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction)
-* [慕课HTML+CSS基础教程视频](http://www.imooc.com/learn/9)
+* [JavaScript入门篇](http://www.imooc.com/view/36)
+* [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
 任务链接
 ---
-http://ife.baidu.com/task/detail?taskId=1
+http://ife.baidu.com/task/detail?taskId=18

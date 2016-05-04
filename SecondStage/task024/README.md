@@ -1,12 +1,12 @@
-零基础HTML编码
+任务二十四：JavaScript和树（三）
 ===
 **面向人群：** 零基础或初学者
 
-**难度：** 简单
+**难度：** 中等
 
-**发布时间：** 03-14
+**发布时间：** 03-21
 
-**截止时间：** 04-03 23:59
+**截止时间：** 04-21 23:59
 
 重要说明
 ---
@@ -16,20 +16,22 @@
 
 任务目的
 ---
-* 了解HTML的定义、概念、发展简史
-* 掌握常用HTML标签的含义、用法
-* 能够基于设计稿来合理规划HTML文档结构
-* 理解语义化，合理地使用HTML标签来构建页面
+* 熟练JavaScript
+* 学习树这种数据结构的基本知识
 
 任务描述
 ---
-* 参考 [示例图（点击查看）](http://7xrp04.com1.z0.glb.clouddn.com/task_1_1_1.jpg) ，完成一个HTML页面代码编写（不写CSS，不需要关注样式，只关注文档结构）
+* 基于任务23，添加节点的选择、增加与删除的功能
+* 点击某个节点元素，则该节点元素呈现一个特殊被选中的样式
+* 增加一个删除按钮，当选中某个节点元素后，点击删除按钮，则将该节点及其所有子节点删除掉
+* 增加一个输入框及一个“添加”按钮当选中某个节点元素后，点击增加按钮，则在该节点下增加一个子节点，节点内容为输入框中内容，插入在其子节点的最后一个位置
 
 任务注意事项
 ---
-* 只需要完成HTML代码编写，不需要写CSS
-* 示例图仅为参考，不需要完全实现一致，其中的图片、文案均可自行设定
-* 尽可能多地尝试更多的HTML标签
+* 实现简单功能的同时，请仔细学习JavaScript基本语法、事件、DOM相关的知识
+* 请注意代码风格的整齐、优雅
+* 代码中含有必要的注释
+* 建议不使用任何第三方库、框架
 
 任务协作建议
 ---
@@ -40,10 +42,14 @@
 
 在线学习参考资料
 ---
-* [Web相关名词通俗解释](https://www.zhihu.com/question/22689579)
-* [MDN HTML入门](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Introduction)
-* [慕课HTML+CSS基础教程视频](http://www.imooc.com/learn/9)
+* [JavaScript入门篇](http://www.imooc.com/view/36)
+* [MDN JavaScript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+* [js数据结构和算法 二叉树](https://segmentfault.com/a/1190000000740261)
+* [Data Structures With JavaScript: Tree](http://code.tutsplus.com/articles/data-structures-with-javascript-tree--cms-23393)
+* [Computer science in JavaScript: Binary search tree](https://www.nczonline.net/blog/2009/06/09/computer-science-in-javascript-binary-search-tree-part-1/)
 
 任务链接
 ---
-http://ife.baidu.com/task/detail?taskId=1
+http://ife.baidu.com/task/detail?taskId=24
+
+
