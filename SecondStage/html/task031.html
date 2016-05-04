@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task031-联动</title>
+	<style type="text/css">
+	form{
+		font-family: 'Microsoft yahei';
+		font-size: 25px;
+	}
+	section{
+		margin-top:20px; 
+	}
+	input{
+		font-size: 25px;
+	}
+	select{
+		height: 35px;
+		font-size: 23px;
+	}
+	label{
+		display: inline-block;
+		width: 100px;
+		text-align: right;
+	}
+	#radio{
+		margin-left: 100px; 
+	}
+	#city{
+		margin-right: 40px;
+		width: 100px;
+	}
+	#school{
+		width: 200px;
+	}
+	#company{
+		width: 345px;
+	}
+	#companyInfo{
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<form>
+		<section id="radio">
+			<input type="radio" name="isStudent" checked="checked" id="inSchool">在校生
+			<input type="radio" name="isStudent" id="outSchool">非在校生
+		</section>
+		<section id="schoolInfo">
+			<label>学校</label>
+			<select id="city">
+				<option>北京</option>
+			</select>
+			<select id="school">
+				<option>北京大学</option>
+			</select>
+		</section>
+		<section id="companyInfo">
+			<label>就业单位</label>
+			<input type="text" id="company">
+		</section>
+	</form>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		// 存储城市和及学校信息
+		var schoolTexts = {"北京":["北京大学", "清华大学", "北京师范大学"],
+							"上海":["上海交通大学", "复旦大学", "华东师范大学"],
+							"西安":["西安交通大学", "西北工业大学", "西安电子科技大学"]};
+		// 初始化城市下拉框
+		var cityStr = "";
+		for(var key in schoolTexts){
+			cityStr += "<option>" + key + "</option>";
+		}
+		var oCity = document.getElementById('city');
+		oCity.innerHTML = cityStr;
+
+		// 设置单选框变化函数
+		document.getElementById('radio').onchange = function(){
+			if(document.getElementById('inSchool').checked == true){
+				document.getElementById('schoolInfo').style.display = "block";
+				document.getElementById('companyInfo').style.display = "none";
+			}else{
+				document.getElementById('companyInfo').style.display = "block";
+				document.getElementById('schoolInfo').style.display = "none";
+			}
+		}
+
+		// 设置城市下拉框变化函数
+		oCity.onchange = function(){
+			var curCity = this.value;
+			var schoolStr = "";
+			for(var i = 0; i < schoolTexts[curCity].length; i++){
+				schoolStr += "<option>" + schoolTexts[curCity][i] + "</option>";
+			}
+			document.getElementById('school').innerHTML = schoolStr;
+		}
+
+	}
+</script>
+</html>
