@@ -9,7 +9,7 @@
 		padding: 0;
 	}
 	form{
-		width: 400px;
+		width: 500px;
 		font-size: 20px;
 		font-family: "宋体";
 	}
@@ -20,7 +20,7 @@
 		font-weight: bold;
 	}
 	input{
-		border: 1px solid #aaa;
+		border: 2px solid #aaa;
 		height: 35px;
 		margin: 10px 20px 0 0;
 		border-radius: 5px;
@@ -31,41 +31,143 @@
 		margin-left: 108px;
 		font-size: 16px;
 		color: #bbb;
+		display: none;
+	}
+	#submit{
+		margin-left: 310px;
+		border: 2px solid #ddd;
+		background-color: #0B90D8;
+		padding: 5px;
 	}
 	</style>
 </head>
 <body>
-	<form>
+	<form id="form">
 		<section>
 			<label>名称</label>
-			<input type="text">
+			<input type="text" id="name">
 			<br/>
-			<span>必填，宽度为4~16个字符</span>
+			<span id="nameTip">必填，宽度为4~16个字符</span>
 		</section>
 		<section>
 			<label>密码</label>
-			<input type="password">
+			<input type="password" id="pwd">
 			<br/>
-			<span>密码可用</span>
+			<span id="pwdTip">密码可用</span>
 		</section>
 		<section>
 			<label>密码确认</label>
-			<input type="password">
+			<input type="password" id="repwd">
 			<br/>
-			<span>密码可用</span>
+			<span id="repwdTip">密码可用</span>
 		</section>
 		<section>
 			<label>邮箱</label>
-			<input type="text">
+			<input type="text" id="email">
 			<br/>
-			<span>邮箱格式正确</span>
+			<span id="emailTip">邮箱格式正确</span>
 		</section>
 		<section>
 			<label>手机</label>
-			<input type="text">
+			<input type="text" id="phone">
 			<br/>
-			<span>手机格式正确</span>
+			<span id="phoneTip">手机格式正确</span>
 		</section>
 	</form>
+	<input type="button" value="提交" id="submit">
 </body>
+<script type="text/javascript">
+	window.onload = function(){
+		var tipText = {name:{tip:"必填，长度为4~16位字符",right:"名称格式正确",wrong:"名称格式有误", isPassed:false},
+                       pwd:{tip:"必填，长度为4~16位字符,包含字母和数字",right:"密码可用",wrong:"密码不可用", isPassed:false},
+                       repwd:{tip:"必填，必须与密码相同",right:"密码输入一致",wrong:"密码输入不一致", isPassed:false},
+                       email:{tip:"填写正确的邮箱格式",right:"邮箱格式正确",wrong:"邮箱格式错误", isPassed:false},
+                       phone:{tip:"必填，长度11位数字",right:"手机格式正确",wrong:"手机格式错误", isPassed:false}};
+        var oForm = document.getElementById('form');
+        var oInputs = oForm.getElementsByTagName('input');
+        for(var i = 0; i < oInputs.length; i++){
+        	oInputs[i].onfocus = function(e){
+        		var e = e || window.event;
+        		myFocus(e.target.id);
+        	}
+        }
+
+        for(var i = 0; i < oInputs.length; i++){
+        	if(oInputs[i].id === "name"){
+        		oInputs[i].onblur = function(){
+					var oInput = document.getElementById("name");
+    				flag = /^[a-zA-Z0-9]{4,16}$/.test(oInput.value.replace(/[\u4e00-\u9fa5]/g, "ss"));
+    				myBlur(oInput, "name", flag);
+        		}
+        		continue;
+        	}
+        	if(oInputs[i].id === "pwd"){
+        		oInputs[i].onblur = function(){
+        			var oInput = document.getElementById("pwd");
+	    			flag = /^\S{4,16}$/.test(oInput.value);
+	    			myBlur(oInput, "pwd", flag);
+        		}
+    			continue;
+        	}
+        	if(oInputs[i].id === "repwd"){
+        		oInputs[i].onblur = function(){
+        			var oInput = document.getElementById("repwd");
+	    			flag = document.getElementById("pwd").value === oInput.value;
+	    			myBlur(oInput, "repwd", flag);
+        		}
+    			continue;
+        	}
+        	if(oInputs[i].id === "email"){
+        		oInputs[i].onblur = function(){
+        			var oInput = document.getElementById("email");
+					flag = /^([0-9a-z\.]+)@([0-9a-z]+\.[0-9a-z]+)$/.test(oInput.value);
+					myBlur(oInput, "email", flag);
+        		}
+    			continue;
+        	}
+        	if(oInputs[i].id === "phone"){
+        		oInputs[i].onblur = function(){
+        			var oInput = document.getElementById("phone");
+					flag = /^[1][0-9]{10}$/.test(oInput.value);
+					myBlur(oInput, "phone", flag);
+        		}
+    			continue;
+        	}
+        }
+
+		function myFocus(id){
+			var oInput = document.getElementById(id);
+			var oInputTip = document.getElementById(id + 'Tip');
+			oInput.style.border = "2px solid #aaa";
+			oInputTip.style.display = "inline";
+			oInputTip.style.color = "#bbb";
+			oInputTip.innerHTML = tipText[id]["tip"];
+		}
+
+		function myBlur(oInput, id, flag){
+			var oInputTip = document.getElementById(id + "Tip");
+			if(flag){
+				oInput.style.border = "2px solid green";
+				oInputTip.style.color = "green";
+				oInputTip.innerHTML = tipText[id]["right"];
+				tipText[id]["isPassed"] = true;
+			}
+			else{
+				oInput.style.border = "2px solid red";
+				oInputTip.style.color = "red";
+				oInputTip.innerHTML = tipText[id]["wrong"];
+			}
+		}
+
+		document.getElementById("submit").onclick = function(){
+			for(key in tipText){
+				if(tipText[key]["isPassed"] === false){
+					alert("提交失败，请检查");
+					return;
+				}
+			}
+			alert("提交成功");
+		}
+	}
+</script>
 </html>
